@@ -20,15 +20,10 @@ spec:
       labels:
         app: spring-petclinic
     spec:
-      # HIGH IMPACT: Using host network namespace
-      hostNetwork: true
       containers:
       - name: spring-petclinic
         imagePullPolicy: Always
         image: quay.io/siamaksade/spring-petclinic@sha256:06af8b71d18ab4df45e92d45f8bccf034b03d48fe82cbab4f0fe08223b809085
-        # HIGH IMPACT: Privileged container
-        securityContext:
-          privileged: true
         livenessProbe:
           failureThreshold: 3
           httpGet:

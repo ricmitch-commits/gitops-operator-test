@@ -9,11 +9,11 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   source:
-    directory:
-      recurse: true
     path: app
     repoURL: https://github.com/ricmitch-commits/gitops-operator-test.git
     targetRevision: main
+    plugin:
+      name: manifest-validator-cmp-v1.0.0
   syncPolicy:
     automated:
       prune: true

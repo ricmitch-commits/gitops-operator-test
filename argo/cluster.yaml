@@ -13,4 +13,8 @@ spec:
       recurse: true
     path: cluster
     repoURL: https://github.com/ricmitch-commits/gitops-operator-test
-    targetRevision: HEAD
+    targetRevision: main
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true

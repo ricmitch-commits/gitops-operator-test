@@ -9,8 +9,8 @@ spec:
     server: https://kubernetes.default.svc
   project: default
   source:
-    directory:
-      recurse: true
+    plugin:
+      name: manifest-validator    
     path: app
     repoURL: https://github.com/ricmitch-commits/gitops-operator-test.git
     targetRevision: main
